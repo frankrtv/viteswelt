@@ -199,4 +199,20 @@ Contributions are welcome! Please feel free to submit issues and enhancement req
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+This template is built upon these amazing technologies and tools:
+
+- [SvelteKit](https://kit.svelte.dev/) - The official application framework for Svelte
+- [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework
+- [TypeScript](https://www.typescriptlang.org/) - JavaScript with syntax for types
+- [ESLint](https://eslint.org/) - The pluggable linting utility for JavaScript
+- [Prettier](https://prettier.io/) - Opinionated code formatter
+- [tailwind-merge](https://github.com/dcastil/tailwind-merge) - Merge Tailwind CSS classes without style conflicts
+- [PostCSS](https://postcss.org/) - A tool for transforming CSS with JavaScript
+- [Autoprefixer](https://github.com/postcss/autoprefixer) - PostCSS plugin to parse CSS and add vendor prefixes
+
+Special thanks to the maintainers and contributors of these projects for making web development better for everyone. 
