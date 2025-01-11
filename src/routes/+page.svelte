@@ -2,6 +2,13 @@
 <script lang="ts">
   import Button from '$lib/components/Button.svelte';
   import { theme, toggleTheme } from '$lib/stores/theme';
+  import { fade, fly } from 'svelte/transition';
+  import { onMount } from 'svelte';
+
+  let mounted = false;
+  onMount(() => {
+    mounted = true;
+  });
 
   $: isDarkMode = $theme === 'dark';
 
@@ -36,18 +43,21 @@
   ];
 </script>
 
-<main class="min-h-screen bg-white dark:bg-gray-900">
-  <div class="container mx-auto px-4 py-8">
+<main class="min-h-screen bg-gradient-to-br from-white via-blue-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500">
+  <div class="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+  
+  <div class="container relative mx-auto px-4 py-8">
     <!-- Header section -->
     <header class="mb-12">
       <nav class="flex justify-between items-center">
-        <h1 class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        <h1 class="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform cursor-default">
           ViteSwelt
         </h1>
         <Button 
           variant="secondary"
           on:click={toggleTheme}
           aria-label="Toggle dark mode"
+          class="hover:rotate-12 transition-transform"
         >
           {isDarkMode ? '🌞' : '🌙'}
         </Button>
@@ -55,24 +65,30 @@
     </header>
 
     <!-- Hero section -->
-    <section class="text-center py-12 mb-16">
-      <h2 class="text-4xl font-bold mb-4">Modern SvelteKit Template</h2>
+    {#if mounted}
+    <section class="text-center py-12 mb-16" in:fade={{ duration: 1000, delay: 200 }}>
+      <h2 class="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        Modern SvelteKit Template
+      </h2>
       <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
         A production-ready starter template powered by Vite, featuring SvelteKit, Tailwind CSS, TypeScript, and modern development tools.
       </p>
       <div class="flex gap-4 justify-center">
-        <Button>Get Started →</Button>
-        <Button variant="secondary" href="https://github.com/frankrtv/viteswelt">View on GitHub</Button>
+        <Button href="/getting-started" class="transform hover:scale-105 transition-transform">Get Started →</Button>
+        <Button variant="secondary" href="https://github.com/frankrtv/viteswelt" class="transform hover:scale-105 transition-transform">View on GitHub</Button>
       </div>
     </section>
 
     <!-- Features grid -->
-    <section class="mb-16">
+    <section class="mb-16" in:fade={{ duration: 1000, delay: 400 }}>
       <h3 class="text-2xl font-semibold mb-8">Core Features</h3>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {#each features.core as feature}
-          <div class="p-6 rounded-lg bg-gray-50 dark:bg-gray-800 hover:shadow-lg transition-shadow">
-            <div class="text-2xl mb-3">{feature.icon}</div>
+        {#each features.core as feature, i}
+          <div 
+            class="p-6 rounded-lg bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            in:fly={{ y: 20, duration: 400, delay: i * 150 }}
+          >
+            <div class="text-2xl mb-3 transform hover:scale-110 transition-transform inline-block">{feature.icon}</div>
             <h4 class="font-semibold mb-2">{feature.title}</h4>
             <p class="text-gray-600 dark:text-gray-300 text-sm">{feature.description}</p>
           </div>
@@ -80,12 +96,15 @@
       </div>
     </section>
 
-    <section class="mb-16">
+    <section class="mb-16" in:fade={{ duration: 1000, delay: 600 }}>
       <h3 class="text-2xl font-semibold mb-8">Developer Experience</h3>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {#each features.dev as feature}
-          <div class="p-6 rounded-lg bg-gray-50 dark:bg-gray-800 hover:shadow-lg transition-shadow">
-            <div class="text-2xl mb-3">{feature.icon}</div>
+        {#each features.dev as feature, i}
+          <div 
+            class="p-6 rounded-lg bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            in:fly={{ y: 20, duration: 400, delay: i * 150 }}
+          >
+            <div class="text-2xl mb-3 transform hover:scale-110 transition-transform inline-block">{feature.icon}</div>
             <h4 class="font-semibold mb-2">{feature.title}</h4>
             <p class="text-gray-600 dark:text-gray-300 text-sm">{feature.description}</p>
           </div>
@@ -94,11 +113,14 @@
     </section>
 
     <!-- Use cases -->
-    <section class="mb-16">
+    <section class="mb-16" in:fade={{ duration: 1000, delay: 800 }}>
       <h3 class="text-2xl font-semibold mb-8">Perfect For</h3>
       <div class="grid md:grid-cols-3 gap-8">
-        {#each useCases as useCase}
-          <div class="p-6 rounded-lg bg-gray-50 dark:bg-gray-800">
+        {#each useCases as useCase, i}
+          <div 
+            class="p-6 rounded-lg bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            in:fly={{ y: 20, duration: 400, delay: i * 150 }}
+          >
             <h4 class="text-xl font-semibold mb-4">{useCase.title}</h4>
             <ul class="space-y-2">
               {#each useCase.items as item}
@@ -114,16 +136,35 @@
     </section>
 
     <!-- Call to action -->
-    <section class="text-center py-12">
+    <section class="text-center py-12" in:fade={{ duration: 1000, delay: 1000 }}>
       <div class="max-w-2xl mx-auto">
-        <h3 class="text-2xl font-bold mb-4">Ready to Start Building?</h3>
+        <h3 class="text-2xl font-bold mb-4">Ready to Create Something Amazing?</h3>
         <p class="text-gray-600 dark:text-gray-300 mb-8">
-          Get started with our modern stack and build your next project faster.
+          Start your next project with a modern, production-ready template. No configuration needed.
         </p>
-        <Button>
-          Clone Template →
+        <Button href="https://github.com/frankrtv/viteswelt/generate" class="transform hover:scale-105 transition-transform">
+          Use Template →
         </Button>
       </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="mt-8 text-center text-sm text-gray-500 dark:text-gray-400" in:fade={{ duration: 1000, delay: 1200 }}>
+      <div class="flex justify-between items-center">
+        <p>
+          Crafted with curiosity in Stavanger 🇳🇴
+        </p>
+        <p>
+          Project Lead: <a href="https://github.com/frankrtv" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition-colors">Frank Rørtvedt</a>
+        </p>
+      </div>
+    </footer>
+    {/if}
   </div>
-</main> 
+</main>
+
+<style>
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+</style> 
