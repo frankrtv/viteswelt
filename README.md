@@ -20,7 +20,7 @@ A modern, opinionated SvelteKit starter template powered by Vite, featuring Tail
 ### Manual Setup
 1. Clone this repository:
    ```bash
-   git clone https://github.com/frankhereford/viteswelt.git your-project-name
+   git clone https://github.com/frankrtv/viteswelt.git your-project-name
    cd your-project-name
    ```
 2. Remove the existing git repository and initialize a new one:
@@ -70,7 +70,7 @@ A modern, opinionated SvelteKit starter template powered by Vite, featuring Tail
 
 1. Clone this repository:
    ```bash
-   git clone [repository-url]
+   git clone https://github.com/frankrtv/viteswelt.git
    cd viteswelt
    ```
 

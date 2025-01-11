@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "A modern, opinionated SvelteKit starter template powered by Vite, featuring Tailwind CSS, TypeScript, and dark mode",
-  "author": "Frank Hereford",
+  "author": "Frank Rørtvedt",
   "license": "MIT",
   "repository": {
     "type": "git",
