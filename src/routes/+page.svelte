@@ -62,7 +62,7 @@
       </p>
       <div class="flex gap-4 justify-center">
         <Button>Get Started →</Button>
-        <Button variant="secondary">View on GitHub</Button>
+        <Button variant="secondary" href="https://github.com/frankrtv/viteswelt">View on GitHub</Button>
       </div>
     </section>
 

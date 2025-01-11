@@ -2,9 +2,11 @@
 
 A modern, opinionated SvelteKit starter template powered by Vite, featuring Tailwind CSS, TypeScript, and dark mode.
 
+📦 **[View on GitHub](https://github.com/frankrtv/viteswelt)**
+
 ## 📦 Using This Template
 
-### Direct Use
+### Method 1: GitHub Template (Recommended)
 1. Click the "Use this template" button above
 2. Create a new repository from this template
 3. Clone your new repository
@@ -17,29 +19,48 @@ A modern, opinionated SvelteKit starter template powered by Vite, featuring Tail
    npm run dev
    ```
 
-### Manual Setup
-1. Clone this repository:
+### Method 2: Degit (Latest Release)
+1. Create a new project using degit:
    ```bash
-   git clone https://github.com/frankrtv/viteswelt.git your-project-name
-   cd your-project-name
+   npx degit frankrtv/viteswelt#main my-project
+   cd my-project
    ```
-2. Remove the existing git repository and initialize a new one:
+2. Install dependencies:
    ```bash
-   rm -rf .git
-   git init
+   npm install
+   ```
+3. Start developing:
+   ```bash
+   npm run dev
+   ```
+
+### Method 3: Specific Version
+1. Check the [releases page](https://github.com/frankrtv/viteswelt/releases) for available versions
+2. Create a new project using a specific version:
+   ```bash
+   npx degit frankrtv/viteswelt#v1.0.0 my-project
+   cd my-project
    ```
 3. Install dependencies:
    ```bash
    npm install
    ```
-4. Update package.json:
+
+### Post-Setup Steps
+1. Update `package.json`:
    - Change the name
    - Update the description
    - Adjust the version
    - Update repository links
-5. Start developing:
+2. Update or remove CHANGELOG.md
+3. Update LICENSE file
+4. Update this README
+5. Initialize a new git repository:
    ```bash
-   npm run dev
+   rm -rf .git
+   git init
+   git add .
+   git commit -m "Initial commit"
    ```
 
 ## ✨ Features
@@ -70,8 +91,8 @@ A modern, opinionated SvelteKit starter template powered by Vite, featuring Tail
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/frankrtv/viteswelt.git
-   cd viteswelt
+   git clone https://github.com/frankrtv/viteswelt.git your-project-name
+   cd your-project-name
    ```
 
 2. Install dependencies:

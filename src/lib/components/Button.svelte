@@ -4,6 +4,7 @@
   export let variant: 'primary' | 'secondary' = 'primary';
   export let type: 'button' | 'submit' | 'reset' = 'button';
   export let disabled = false;
+  export let href: string | undefined = undefined;
   let className = '';
   export { className as class };
 
@@ -15,12 +16,24 @@
   };
 </script>
 
-<button
-  {type}
-  {disabled}
-  class={twMerge(baseStyles, variants[variant], className)}
-  on:click
-  {...$$restProps}
->
-  <slot />
-</button> 
+{#if href}
+  <a
+    {href}
+    class={twMerge(baseStyles, variants[variant], className)}
+    target="_blank"
+    rel="noopener noreferrer"
+    {...$$restProps}
+  >
+    <slot />
+  </a>
+{:else}
+  <button
+    {type}
+    {disabled}
+    class={twMerge(baseStyles, variants[variant], className)}
+    on:click
+    {...$$restProps}
+  >
+    <slot />
+  </button>
+{/if} 
