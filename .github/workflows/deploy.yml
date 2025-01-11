@@ -14,6 +14,9 @@ concurrency:
   group: 'pages'
   cancel-in-progress: true
 
+env:
+  NODE_ENV: production
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,8 +26,12 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-      - run: npm ci
-      - run: npm run build
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: |
+          npm run build
+          touch build/.nojekyll
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
