@@ -1,6 +1,6 @@
-# Contributing to SvelteKit Starter
+# Contributing to ViteSwelt
 
-Thank you for your interest in contributing to SvelteKit Starter! We welcome contributions from the community.
+Thank you for your interest in contributing to ViteSwelt! We welcome contributions from the community.
 
 ## How to Contribute
 

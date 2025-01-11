@@ -1,21 +1,22 @@
 {
-  "name": "sveltekit-starter",
+  "name": "viteswelt",
   "version": "1.0.0",
   "type": "module",
-  "description": "A modern, opinionated starter template for SvelteKit applications with Tailwind CSS, TypeScript, and dark mode support",
-  "author": "Your Name",
+  "description": "A modern, opinionated SvelteKit starter template powered by Vite, featuring Tailwind CSS, TypeScript, and dark mode",
+  "author": "Frank Hereford",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/[your-username]/sveltekit-starter.git"
+    "url": "git+https://github.com/frankhereford/viteswelt.git"
   },
   "bugs": {
-    "url": "https://github.com/[your-username]/sveltekit-starter/issues"
+    "url": "https://github.com/frankhereford/viteswelt/issues"
   },
-  "homepage": "https://github.com/[your-username]/sveltekit-starter#readme",
+  "homepage": "https://github.com/frankhereford/viteswelt#readme",
   "keywords": [
     "svelte",
     "sveltekit",
+    "vite",
     "typescript",
     "tailwindcss",
     "starter",

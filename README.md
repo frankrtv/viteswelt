@@ -1,6 +1,6 @@
-# SvelteKit Starter Template
+# ViteSwelt
 
-A modern, opinionated starter template for SvelteKit applications with Tailwind CSS, TypeScript, and dark mode support.
+A modern, opinionated SvelteKit starter template powered by Vite, featuring Tailwind CSS, TypeScript, and dark mode.
 
 ## 📦 Using This Template
 
@@ -20,7 +20,7 @@ A modern, opinionated starter template for SvelteKit applications with Tailwind 
 ### Manual Setup
 1. Clone this repository:
    ```bash
-   git clone https://github.com/[your-username]/sveltekit-starter.git your-project-name
+   git clone https://github.com/frankhereford/viteswelt.git your-project-name
    cd your-project-name
    ```
 2. Remove the existing git repository and initialize a new one:
@@ -71,7 +71,7 @@ A modern, opinionated starter template for SvelteKit applications with Tailwind 
 1. Clone this repository:
    ```bash
    git clone [repository-url]
-   cd sveltekit-starter
+   cd viteswelt
    ```
 
 2. Install dependencies:
@@ -89,7 +89,7 @@ A modern, opinionated starter template for SvelteKit applications with Tailwind 
 ## 📁 Project Structure
 
 ```
-sveltekit-starter/
+viteswelt/
 ├── src/
 │   ├── lib/
 │   │   ├── components/     # Reusable UI components

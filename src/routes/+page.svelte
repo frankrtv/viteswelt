@@ -8,9 +8,9 @@
   const features = {
     core: [
       { icon: '🚀', title: 'SvelteKit', description: 'Latest version with TypeScript support' },
+      { icon: '⚡', title: 'Vite', description: 'Lightning-fast development experience' },
       { icon: '🎨', title: 'Tailwind CSS', description: 'Utility-first CSS framework with dark mode' },
-      { icon: '🌓', title: 'Dark Mode', description: 'System-aware theme with persistence' },
-      { icon: '📱', title: 'Responsive', description: 'Mobile-first design approach' }
+      { icon: '🌓', title: 'Dark Mode', description: 'System-aware theme with persistence' }
     ],
     dev: [
       { icon: '🧩', title: 'Component Library', description: 'Reusable, typed components' },
@@ -42,7 +42,7 @@
     <header class="mb-12">
       <nav class="flex justify-between items-center">
         <h1 class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-          SvelteKit Starter
+          ViteSwelt
         </h1>
         <Button 
           variant="secondary"
@@ -58,7 +58,7 @@
     <section class="text-center py-12 mb-16">
       <h2 class="text-4xl font-bold mb-4">Modern SvelteKit Template</h2>
       <p class="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-        A production-ready starter template featuring SvelteKit, Tailwind CSS, TypeScript, and modern development tools.
+        A production-ready starter template powered by Vite, featuring SvelteKit, Tailwind CSS, TypeScript, and modern development tools.
       </p>
       <div class="flex gap-4 justify-center">
         <Button>Get Started →</Button>
