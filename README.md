@@ -236,4 +236,80 @@ This template is built upon these amazing technologies and tools:
 - [PostCSS](https://postcss.org/) - A tool for transforming CSS with JavaScript
 - [Autoprefixer](https://github.com/postcss/autoprefixer) - PostCSS plugin to parse CSS and add vendor prefixes
 
-Special thanks to the maintainers and contributors of these projects for making web development better for everyone. 
+Special thanks to the maintainers and contributors of these projects for making web development better for everyone.
+
+## Template Usage Guide
+
+### Getting Started with the Template
+
+1. **Create Your Project**
+   - Use GitHub's "Use this template" button (recommended)
+   - Or use degit: `npx degit frankrtv/viteswelt my-project`
+
+2. **Initial Setup**
+   - Update `package.json` with your project details
+   - Customize the README
+   - Initialize a new git repository (if using degit)
+
+### Best Practices
+
+1. **File Organization**
+   ```
+   src/
+   ├── lib/
+   │   ├── components/
+   │   │   ├── template/  # Original template components
+   │   │   └── custom/    # Your custom components
+   │   └── stores/
+   ├── routes/
+   └── styles/
+   ```
+
+2. **Customization Guidelines**
+   - Create new components rather than heavily modifying template ones
+   - Keep template files unchanged when possible
+   - Document any modifications to template files in `TEMPLATE_CHANGES.md`
+   - Use the provided component patterns for consistency
+
+3. **Staying Updated**
+   - Use the provided GitHub Action for manual syncs with the template
+   - Review template updates carefully
+   - Test thoroughly after syncing
+   - Document significant template changes
+
+4. **Version Control**
+   - Tag your releases
+   - Keep track of the template version you're using
+   - Document template updates in your changelog
+
+### Managing Template Updates
+
+1. **When to Update**
+   - Before starting new features
+   - When needing specific template improvements
+   - After major template versions
+   - For security updates
+
+2. **How to Update**
+   - Go to Actions → "Sync with Upstream"
+   - Click "Run workflow"
+   - Review the created PR carefully
+   - Test changes before merging
+
+3. **Handling Conflicts**
+   - Review conflicts file by file
+   - Prefer template changes for core functionality
+   - Preserve your custom business logic
+   - Document your decisions
+
+### Documentation
+
+1. **Required Documentation**
+   - `TEMPLATE_CHANGES.md` - Track modifications to template files
+   - `CHANGELOG.md` - Document your project changes
+   - Component documentation in your custom components
+
+2. **Recommended Practices**
+   - Document your component usage
+   - Keep a list of modified template files
+   - Document any template features you depend on

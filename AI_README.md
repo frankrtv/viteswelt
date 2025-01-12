@@ -3,6 +3,54 @@
 ## Project Context
 ViteSwelt is a modern SvelteKit starter template designed to provide a robust foundation for web development. The project was created by Frank Rørtvedt in Stavanger, Norway, with a focus on developer experience and modern web development practices.
 
+## Template Usage Best Practices
+
+### Initial Setup
+1. **Template Generation**
+   - Use GitHub's "Use this template" button for new projects
+   - Or use `degit` for a clean start without git history
+   - Initialize a new git repository if using degit
+
+### Managing Updates
+1. **Upstream Sync Strategy**
+   - Manual syncs are preferred over automatic daily syncs
+   - Use the provided GitHub Action workflow for syncing
+   - Review template updates carefully before merging
+
+2. **Customization Guidelines**
+   - Create new components instead of heavily modifying template ones
+   - Keep template-provided files as unchanged as possible
+   - Document any necessary modifications to template files
+   - Store custom components in separate directories
+
+3. **File Organization**
+   - Template files: `/src/lib/components/template/`
+   - Custom components: `/src/lib/components/custom/`
+   - Document template modifications in `TEMPLATE_CHANGES.md`
+
+4. **Version Control**
+   - Tag important releases
+   - Document template version in use
+   - Keep track of merged template updates
+
+### Handling Template Updates
+1. **When to Sync**
+   - Before starting new features
+   - When needing specific template improvements
+   - After major template versions
+   - For security updates
+
+2. **How to Sync**
+   - Use the manual GitHub Action workflow
+   - Review changes file by file
+   - Test thoroughly after syncing
+   - Document merged changes
+
+3. **Conflict Resolution**
+   - Prefer template changes for core functionality
+   - Preserve custom business logic
+   - Document resolution decisions
+
 ## Project Structure
 - `/src/routes/` - SvelteKit pages and layouts
 - `/src/lib/` - Reusable components and utilities

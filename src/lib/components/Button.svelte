@@ -20,8 +20,8 @@
   <a
     {href}
     class={twMerge(baseStyles, variants[variant], className)}
-    target="_blank"
-    rel="noopener noreferrer"
+    target={href.startsWith('http') ? '_blank' : undefined}
+    rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
     {...$$restProps}
   >
     <slot />

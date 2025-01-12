@@ -1,0 +1,55 @@
+name: Sync with Upstream
+
+on:
+  workflow_dispatch:  # Manual trigger only
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - name: Configure Git
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          
+      - name: Add upstream repository
+        run: |
+          git remote add upstream https://github.com/frankrtv/viteswelt.git
+          git fetch upstream
+          
+      - name: Create sync branch
+        run: |
+          git checkout -b sync-upstream
+          
+      - name: Merge upstream changes
+        run: |
+          git merge upstream/main --allow-unrelated-histories
+          
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          title: 'chore: sync with upstream template'
+          body: |
+            This PR syncs changes from the upstream template repository.
+            
+            Please review the changes carefully before merging, especially if you have made customizations to the affected files.
+            
+            Changes from upstream template may include:
+            - Bug fixes
+            - New features
+            - Documentation updates
+            - Dependency updates
+          branch: sync-upstream
+          delete-branch: true
+          labels: |
+            sync
+            automated pr 

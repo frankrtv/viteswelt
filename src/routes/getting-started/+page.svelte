@@ -24,7 +24,10 @@
     <!-- Header -->
     <div class="mb-12">
       <nav class="flex justify-between items-center mb-8">
-        <Button href="/" variant="secondary">← Back to Home</Button>
+        <Button href="/" variant="secondary" class="group hover:bg-transparent dark:hover:bg-transparent">
+          <span class="inline-block transition-transform group-hover:-translate-x-1">←</span>
+          <span class="ml-1">Back</span>
+        </Button>
         <Button 
           variant="secondary"
           on:click={toggleTheme}
@@ -244,22 +247,101 @@
       <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg">
         <div class="grid md:grid-cols-3 gap-8">
           <div>
-            <h3 class="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">1. Explore the Code</h3>
+            <h3 class="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">1. Project Setup</h3>
             <p class="text-gray-600 dark:text-gray-300">
-              Take a look at the project structure, components, and configuration files to understand how everything works together.
+              Set up your project structure following our best practices:
             </p>
+            <ul class="mt-4 space-y-2 text-gray-600 dark:text-gray-300">
+              <li>• Create custom components directory</li>
+              <li>• Set up documentation files</li>
+              <li>• Configure version control</li>
+            </ul>
           </div>
           <div>
-            <h3 class="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">2. Customize</h3>
+            <h3 class="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">2. Best Practices</h3>
             <p class="text-gray-600 dark:text-gray-300">
-              Modify the template to match your needs. Update styles, add new components, or adjust the configuration.
+              Follow these guidelines for a maintainable project:
             </p>
+            <ul class="mt-4 space-y-2 text-gray-600 dark:text-gray-300">
+              <li>• Keep template files unchanged</li>
+              <li>• Document modifications</li>
+              <li>• Use component patterns</li>
+            </ul>
           </div>
           <div>
-            <h3 class="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">3. Build Something Amazing</h3>
+            <h3 class="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">3. Stay Updated</h3>
             <p class="text-gray-600 dark:text-gray-300">
-              You're all set! Start building your awesome project with modern tools and best practices.
+              Keep your project in sync with the template:
             </p>
+            <ul class="mt-4 space-y-2 text-gray-600 dark:text-gray-300">
+              <li>• Use manual sync workflow</li>
+              <li>• Review updates carefully</li>
+              <li>• Test after syncing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Template Usage -->
+    <section class="mb-12" in:fade={{ delay: 700 }}>
+      <h2 class="text-2xl font-semibold mb-6">Template Usage Guide</h2>
+      <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg">
+        <div class="space-y-8">
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">File Organization</h3>
+            <div class="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg font-mono text-sm">
+              src/<br/>
+              ├── lib/<br/>
+              │   ├── components/<br/>
+              │   │   ├── template/  # Original template components<br/>
+              │   │   └── custom/    # Your custom components<br/>
+              │   └── stores/<br/>
+              ├── routes/<br/>
+              └── styles/
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">Required Documentation</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+              <div class="p-4 bg-gray-50 dark:bg-gray-900 rounded-lg">
+                <h4 class="font-semibold mb-2">TEMPLATE_CHANGES.md</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-300">Track modifications to template files</p>
+              </div>
+              <div class="p-4 bg-gray-50 dark:bg-gray-900 rounded-lg">
+                <h4 class="font-semibold mb-2">CHANGELOG.md</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-300">Document your project changes</p>
+              </div>
+              <div class="p-4 bg-gray-50 dark:bg-gray-900 rounded-lg">
+                <h4 class="font-semibold mb-2">Component Docs</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-300">Document your custom components</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400">Managing Updates</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold mb-2">When to Update</h4>
+                <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                  <li>• Before starting new features</li>
+                  <li>• When needing template improvements</li>
+                  <li>• After major template versions</li>
+                  <li>• For security updates</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-2">How to Update</h4>
+                <ul class="space-y-2 text-gray-600 dark:text-gray-300">
+                  <li>• Go to Actions → "Sync with Upstream"</li>
+                  <li>• Click "Run workflow"</li>
+                  <li>• Review the created PR carefully</li>
+                  <li>• Test changes before merging</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

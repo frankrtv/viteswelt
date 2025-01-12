@@ -34,7 +34,7 @@
     },
     {
       title: 'Content Sites',
-      items: ['Blogs', 'Documentation sites', 'Marketing websites', 'Portfolio sites']
+      items: ['Wikis', 'Docs', 'Product and portfolio sites']
     },
     {
       title: 'Rapid Development',
