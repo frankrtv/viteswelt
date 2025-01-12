@@ -1,6 +1,6 @@
 {
   "name": "viteswelt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "A modern, opinionated SvelteKit starter template powered by Vite, featuring Tailwind CSS, TypeScript, and dark mode",
   "author": "Frank Rørtvedt",
