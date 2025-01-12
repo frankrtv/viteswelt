@@ -14,12 +14,14 @@
     primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
     secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600'
   };
+
+  $: computedClass = twMerge(baseStyles, variants[variant], className);
 </script>
 
 {#if href}
   <a
     {href}
-    class={twMerge(baseStyles, variants[variant], className)}
+    class={computedClass}
     target={href.startsWith('http') ? '_blank' : undefined}
     rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
     {...$$restProps}
@@ -30,7 +32,7 @@
   <button
     {type}
     {disabled}
-    class={twMerge(baseStyles, variants[variant], className)}
+    class={computedClass}
     on:click
     {...$$restProps}
   >

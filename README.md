@@ -6,7 +6,10 @@ A modern, opinionated SvelteKit starter template powered by Vite, featuring Tail
 
 ## 📦 Using This Template
 
-### Method 1: GitHub Template (Recommended)
+### Template Options
+
+#### Option 1: Full Template (With Examples)
+Use this option if you want to start with all example components and documentation:
 1. Click the "Use this template" button above
 2. Create a new repository from this template
 3. Clone your new repository
@@ -14,10 +17,40 @@ A modern, opinionated SvelteKit starter template powered by Vite, featuring Tail
    ```bash
    npm install
    ```
-5. Start developing:
+
+#### Option 2: Clean Start (Core Only)
+Use this option if you want just the core framework without example components:
+1. Click the "Use this template" button above
+2. Create a new repository from this template
+3. Clone your new repository
+4. Run the cleanup script:
    ```bash
-   npm run dev
+   npm run cleanup
    ```
+   This will:
+   - Remove all example components
+   - Remove component documentation
+   - Remove demo pages
+   - Keep core utilities and configurations
+5. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### What's Included in Clean Start
+The clean start option keeps the essential structure and tools:
+- 🛠️ Core setup (SvelteKit, TypeScript, Tailwind CSS)
+- 🎨 Theme system with dark mode
+- 📁 Basic project structure
+- 🔧 All configurations (ESLint, Prettier, TypeScript)
+- 🧰 Core utilities and type definitions
+
+### What's Removed in Clean Start
+The cleanup process removes:
+- 📚 Example components (Button, BentoGrid, etc.)
+- 🎯 Component documentation pages
+- 🖼️ Demo layouts and pages
+- 📝 Example content and assets
 
 ### Method 2: Degit (Latest Release)
 1. Create a new project using degit:
@@ -148,9 +181,34 @@ The Tailwind configuration is located in `tailwind.config.cjs`. You can customiz
 
 ### Components
 
-The template includes several pre-built components:
+The template includes a comprehensive component library:
+
+#### Core UI Components
 - `Button` - Versatile button component with variants
-- More components can be added in `src/lib/components`
+- `Container` - Responsive container with max-width
+- `BentoGrid` - Flexible grid system for creating visually appealing layouts
+- More components in development
+
+#### Features
+- 🎨 **Consistent Design** - All components follow the same design language
+- 🌓 **Dark Mode Support** - Built-in dark mode for all components
+- 📱 **Responsive** - Mobile-first approach with responsive variants
+- 🔒 **Type-Safe** - Full TypeScript support with proper types
+- 📚 **Documentation** - Comprehensive documentation with examples
+
+#### Component Documentation
+Visit the components page in your local development server:
+```bash
+npm run dev
+# Then visit http://localhost:5173/components
+```
+
+Each component includes:
+- Live examples
+- Usage code snippets
+- API documentation
+- Variant demonstrations
+- Responsive behavior
 
 ### Dark Mode
 

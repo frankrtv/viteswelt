@@ -9,6 +9,16 @@
 
 /* Custom styles */
 @layer base {
+  /* Add smooth transitions for theme changes */
+  * {
+    @apply transition-[background-color,border-color,color,fill,stroke] duration-300;
+  }
+
+  /* Disable transitions on page load */
+  .preload * {
+    @apply transition-none;
+  }
+
   body {
     @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-white;
   }

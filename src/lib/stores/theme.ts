@@ -6,6 +6,9 @@ type Theme = 'light' | 'dark';
 // Get initial theme from localStorage or system preference
 const getInitialTheme = (): Theme => {
   if (browser) {
+    // Add preload class to prevent transitions on page load
+    document.documentElement.classList.add('preload');
+    
     const savedTheme = localStorage.getItem('theme') as Theme;
     if (savedTheme) return savedTheme;
     
@@ -26,6 +29,11 @@ theme.subscribe((value) => {
     } else {
       document.documentElement.classList.remove('dark');
     }
+    
+    // Remove preload class after a short delay to enable transitions
+    setTimeout(() => {
+      document.documentElement.classList.remove('preload');
+    }, 50);
   }
 });
 
